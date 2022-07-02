@@ -1,59 +1,117 @@
 [000000] codo_init
 [000000]   platform: Windows
-[000000]   codo_system_init
-[000650]   Compiled against SDL version: 2.0.2
-[000650]   Linked against SDL version:   2.0.9
-[000650]   Current video driver: windows
-[000650]   codo_reset_timer
-[000650]   codo_gui_init
-[000650]   codo_keys_init
-[000650]   codo_text_init
-[000651]   codo_video_init
-[000651]   codo_mouse_init
-[000651]   codo_joystick_init
-[000662]   Reading controller mappings: C:/Users/Listless/AppData/Roaming/pico-8/sdl_controllers.txt
-[000663]   searching for joysticks
-[000663]     found 0 joysticks
-[000663]   ok
-[000663] ok
-[000679] codo_load_pod: C:/Program Files (x86)/PICO-8/pico8.dat ok 
-[000685] codo_set_screen 128 128 8 100
-[000685]  window size: 640 540
-[000685] setting fullscreen window size to 1920 1080
-[001136]   setting filter to nearest (screen_mode 1  back page width: 128)
+[000000]   Found config.txt
+[000000]   
+[000000]     01 window_size 0 0 // window width, height
+[000000]     02 screen_size 0 0 // screen width, height (stretched to window) 
+[000000]     03 show_fps 0 // Draw frames per second in the corner
+[000000]     04 windowed 0 // 1 to start up in windowed mode
+[000000]     05 window_position -1 -1 // x and y position of window (-1, -1 to let the window manager decide)
+[000000]     new window position: -1, -1
+[000000]     06 frameless 0 // 1 to use a window with no frame
+[000000]     07 fullscreen_method 1 // 0 maximized window (linux)  1 borderless desktop-sized window  2 hardware fullscreen (warning: erratic behaviour under some drivers)
+[000000]     08 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
+[000000]     09 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
+[000000]     10 sessions 1 // number of times program has been run
+[000000]     11 rmb_key 0 // 0 for none  226 for LALT
+[000000]     12 desktop_path 
+[000000]     13 read_controllers_in_background 0
+[000000]     14 sound_volume 256 // 0..256
+[000000]     15 music_volume 256 // 0..256
+[000000]     16 mix_buffer_size 1024
+[000000]     17 version 0.2.4C
+[000001]     18 volume 256
+[000001]     19 root_path C:/Users/Listless/AppData/Roaming/pico-8/carts/
+[000001]     20 cdata_path C:/Users/Listless/AppData/Roaming/pico-8/cdata/
+[000001]     21 joystick_index 0
+[000001]     22 button_keys 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[000001]     23 live_notes 0
+[000001]     24 cursor_snap 0
+[000001]     25 gui_theme 0
+[000001]     26 screenshot_scale 3
+[000001]     27 gif_scale 3
+[000001]     28 gif_len 16
+[000001]     29 gif_reset_mode 0
+[000001]     30 host_framerate_control 1
+[000001]     31 splore_filter 0
+[000001]     32 tab_width 1
+[000001]     33 draw_tabs 0
+[000001]     34 record_activity_log 1
+[000001]     35 allow_function_keys 1
+[000001]     36 check_for_cart_updates 1
+[000001]     37 auto_hide_mouse_cursor 5
+[000001]     38 aggressive_backups 0
+[000001]     39 periodic_backups 20
+[000001]     40 transform_screen 0
+[000001]     41 gfx_grid_lines 0
+[000001]   
+[000002]   codo_system_init
+[000793]   Compiled against SDL version: 2.0.2
+[000793]   Linked against SDL version:   2.0.9
+[000793]   Current video driver: windows
+[000793]   codo_reset_timer
+[000793]   codo_gui_init
+[000793]   codo_keys_init
+[000793]   codo_text_init
+[000793]   codo_video_init
+[000793]   codo_mouse_init
+[000793]   codo_joystick_init
+[000795]   Reading controller mappings: C:/Users/Listless/AppData/Roaming/pico-8/sdl_controllers.txt
+[000795]   searching for joysticks
+[000795]     found 0 joysticks
+[000795]   ok
+[000795] ok
+[000813] codo_load_pod: C:/Program Files (x86)/PICO-8/pico8.dat ok 
+[000820] codo_set_screen 128 128 8 100
+[000820]  window size: 640 540
+[000820] setting fullscreen window size to 1920 1080
+[001539]   setting filter to nearest (screen_mode 1  back page width: 128)
   renderer direct3d:
    flags: 0x0000000E ( |  | )
    texture formats (3): ARGB8888, YV12, IYUV
    max texture size: 16384x16384
-[001150]  desktop size: 1920 1080
-[001150] ok
-[001155] codo_sound_init mix_buffer_size: 1024
-[001155] codo_sound_init
-[001155] SDL_INIT_AUDIO ok
-[001186] SDL_OpenAudio ok
-[001186]  freq:22050
+[001556]  desktop size: 1920 1080
+[001556] ok
+[001562] codo_sound_init mix_buffer_size: 1024
+[001562] codo_sound_init
+[001562] SDL_INIT_AUDIO ok
+[001612] SDL_OpenAudio ok
+[001612]  freq:22050
  channels:1
-[001186] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
-[001186] Current audio driver: wasapi
-[001186] splore_init
-[001187] could not load favourites file: C:/Users/Listless/AppData/Roaming/pico-8/favourites.txt
-[160110] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/untitled.p8 running_filename: untitled.p8 running_cart_lid: 
-[183165] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/untitled.p8 running_filename: untitled.p8 running_cart_lid: 
-[184169] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/untitled.p8 running_filename: untitled.p8 running_cart_lid: 
-[276166] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/untitled.p8 running_filename: untitled.p8 running_cart_lid: 
-[305975] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
-[325025] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
-[333679] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
-[410204] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
-[518315] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
-[1529942] window closed (14)
-[1529942] codo_exit
-[1529942]   cmusic_stop
-[1529942]   codo_main_exit
-[1529945]   codo_config_save
-[1529946]   codo_sound_exit
-[1529946]   codo_video_exit
-[1529990]   codo_joystick_exit
-[1529990]   codo_system_exit
-[1529991]   codo_items_created: 2013
-[1529991] ok
+[001612] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
+[001613] Current audio driver: wasapi
+[001613] splore_init
+[001613] could not load favourites file: C:/Users/Listless/AppData/Roaming/pico-8/favourites.txt
+[025919] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[076037] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[365074] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[393978] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[425016] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[429495] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[466048] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[474803] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[492611] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[574274] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[584166] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[642294] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[852451] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[910162] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[1270333] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[1289724] saving screenshot to: C:/Users/Listless/Desktop/rickroll_0.png
+[1289832] codo_save_png result: 0  file: C:/Users/Listless/Desktop/rickroll_0.png
+[1333027] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[1341816] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[1450782] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[1506456] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[1575560] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8 running_filename: rickroll.p8 running_cart_lid: 
+[1701303] window closed (14)
+[1701303] codo_exit
+[1701303]   cmusic_stop
+[1701303]   codo_main_exit
+[1701305]   codo_config_save
+[1701306]   codo_sound_exit
+[1701306]   codo_video_exit
+[1701348]   codo_joystick_exit
+[1701348]   codo_system_exit
+[1701351]   codo_items_created: 1321
+[1701351] ok

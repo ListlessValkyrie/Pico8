@@ -10,3 +10,13 @@
  ccccccci.cii.ii
 2022-07-02 18:55:31 C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8
  iii.icc.........cc..ccic........cccc..c.........ccci.........ii.........i
+2022-07-02 19:31:12 C:/Users/Listless/AppData/Roaming/pico-8/carts/untitled.p8
+ iciiir
+2022-07-02 19:31:30 C:/Users/Listless/AppData/Roaming/pico-8/carts/rickroll.p8
+ riiccccc....ccccccic..c.........cc.......cc...c...c.........ccccc.cc...cc.......
+ ..cccccc.....iic...ccccrc..cccccciii....cccccccr..rc.ccci.........ccccccccccccci
+ c..c...cccccccccccccccrc...c.........r____icccc.....ccc.rccc.c....c.........c.cc
+ cccccc.c..c......ccc...c.........cc.........cccr_c..cicccccc..cc..ccrccrc.......
+ ..cccc.........cc..cc.ir_ccccccccccccccccr_c.........cccccccrr__i.........iiii
+2022-07-02 19:59:28 C:/Users/Listless/AppData/Roaming/pico-8/carts/functions.p8
+ i
