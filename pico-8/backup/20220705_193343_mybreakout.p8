@@ -14,41 +14,21 @@ frame=0
 
 col=0
 
-pad_x=52
+pad_x=30
 pad_y=120
-pad_dx=0
-pad_w=24
-pad_h=3
+pad_w=30
+pad_h=4
+
+
 
 function _init()
 	cls()
 end
 
 function _update()
- buttpress=false
- 
- if btn(0) then
-   --left
-   pad_dx=-5
-   butpress=true
- end
- if btn(1) then
-   --right
-   pad_dx=5
-   buttpress=true
- end
- 
- if not(buttpress) then
-   pad_dx=pad_dx/1.7
- end
-
- pad_x+=pad_dx
- 
- -- frame=frame+1
-	ball_x+=ball_dx
-	ball_y-=ball_dy
-
-
+ frame=frame+1
+	ball_x=ball_x+ball_dx
+	ball_y=ball_y+ball_dy
  --ball_r=2+(sin(frame/10)*2)
  col=col+1
  

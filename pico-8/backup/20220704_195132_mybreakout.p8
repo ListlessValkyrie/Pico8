@@ -8,73 +8,30 @@ ball_y=1
 ball_dy=1
 
 ball_r=2
-ball_dr=0.5
-
-frame=0
 
 col=0
-
-pad_x=52
-pad_y=120
-pad_dx=0
-pad_w=24
-pad_h=3
 
 function _init()
 	cls()
 end
 
 function _update()
- buttpress=false
- 
- if btn(0) then
-   --left
-   pad_dx=-5
-   butpress=true
- end
- if btn(1) then
-   --right
-   pad_dx=5
-   buttpress=true
- end
- 
- if not(buttpress) then
-   pad_dx=pad_dx/1.7
- end
-
- pad_x+=pad_dx
- 
- -- frame=frame+1
-	ball_x+=ball_dx
-	ball_y-=ball_dy
-
-
- --ball_r=2+(sin(frame/10)*2)
+	ball_x=ball_x+ball_dx
+	ball_y=ball_y+ball_dy
  col=col+1
  
  if ball_x >127 or ball_x < 0 then
   ball_dx=-ball_dx
-  sfx(0)
  end
  
  if ball_y >127 or ball_y < 0 then
   ball_dy=-ball_dy
-  sfx(0)
  end
- 
- --if ball_r >3 or ball_r < 2 then
- -- ball_dr=-ball_dr
- --end
 end
 
 function _draw()
-
  cls()
- rectfill(0,0,127,127,1)
- circfill(ball_x,ball_y,ball_r,10)
-
- rectfill(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,7)
-
+ circfill(ball_x,ball_y,ball_r,col)
 end
 
 __gfx__
@@ -84,5 +41,3 @@ __gfx__
 00077000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00077000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00700700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-__sfx__
-000100001d3501d3501d3501d3501d3501d3501d35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

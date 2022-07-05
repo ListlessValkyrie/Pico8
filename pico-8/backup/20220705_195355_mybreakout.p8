@@ -25,30 +25,20 @@ function _init()
 end
 
 function _update()
- buttpress=false
- 
  if btn(0) then
    --left
    pad_dx=-5
-   butpress=true
  end
  if btn(1) then
    --right
    pad_dx=5
-   buttpress=true
  end
- 
- if not(buttpress) then
-   pad_dx=pad_dx/1.7
- end
-
- pad_x+=pad_dx
  
  -- frame=frame+1
 	ball_x+=ball_dx
 	ball_y-=ball_dy
 
-
+ pad_x+=pad_dx
  --ball_r=2+(sin(frame/10)*2)
  col=col+1
  
