@@ -20,8 +20,6 @@ pad_dx=0
 pad_w=24
 pad_h=3
 
-pad_c=7
-
 function _init()
 	cls()
 end
@@ -64,10 +62,9 @@ function _update()
   sfx(0) 
  end
  
- pad_c=7
- if ball_box(pad_x,pad_y,pad_w,pad_h) then
+ if ball_box() then
   -- deal with collision
-  pad_c=8
+  
  
  end
  
@@ -82,25 +79,15 @@ function _draw()
  rectfill(0,0,127,127,1)
  circfill(ball_x,ball_y,ball_r,10)
 
- rectfill(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,pad_c)
+ rectfill(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,7)
 
 end
 
-function ball_box(box_x,box_y,box_w,box_h)
- if ball_y-ball_r > box_y+box_h then   
-  return false
- end 
- if ball_y+ball_r < box_y then   
-  return false
- end
- if ball_x-ball_r > box_x+box_w then   
-  return false
- end 
- if ball_x+ball_r < box_x then   
-  return false
- end
+function ball_box()
   
- return true
+  
+  
+ return false
 end
 
 __gfx__
