@@ -100,70 +100,11 @@ function ball_box(box_x,box_y,box_w,box_h)
  return true
 end
 
-function deflx_ballbox(bx,by,bdx,bdy,tx,ty,tw,th)
- -- calculate wether to deflect the ball
- -- horizontally or vertically when it hits a box
+function deflx_ball_box(bx,by,bdx,bdy,tx,ty,tw,th)
  if bdx == 0 then
-  -- moving vertically
-  return false
- elseif bdy == 0 then
-  -- moving horizontally
+  return false  
+ elseif bdy ==0 then
   return true
- else
-  -- moving diagonally
-  -- calculate slope
-  local slp = bdy / bdx
-  local cx, cy
-  -- check variants
-  if slp > 0 and bdx > 0 then
-   -- moving down right
-   debug1="q1"
-   cx = tx-bx
-   cy = ty-by
-   if cx<=0 then
-    return false
-   elseif cy/cx < slp then
-    return true
-   else
-    return false
-   end
-  elseif slp < 0 and bdx > 0 then
-   debug1="q2"
-   -- moving up right
-   cx = tx-bx
-   cy = ty+th-by
-   if cx<=0 then
-    return false
-   elseif cy/cx < slp then
-    return false
-   else
-    return true
-   end
-  elseif slp > 0 and bdx < 0 then
-   debug1="q3"
-   -- moving left up
-   cx = tx+tw-bx
-   cy = ty+th-by
-   if cx>=0 then
-    return false
-   elseif cy/cx > slp then
-    return false
-   else
-    return true
-   end
-  else
-   -- moving left down
-   debug1="q4"
-   cx = tx+tw-bx
-   cy = ty-by
-   if cx>=0 then
-    return false
-   elseif cy/cx < slp then
-    return false
-   else
-    return true
-   end
-  end
  end
  return false
 end
