@@ -5,9 +5,9 @@ function _init()
 	cls()
 	
 	ball_x=1
-	ball_dx=2
+	ball_dx=1
 	ball_y=1
-	ball_dy=2
+	ball_dy=1
 	ball_r=2
 	ball_dr=0.5
 
@@ -71,12 +71,12 @@ function _update()
  if ball_box(nextx,nexty,pad_x,pad_y,pad_w,pad_h) then
   -- deal with collision
   
-  if deflx_ballbox(ball_x,ball_y,ball_dx,ball_dy,pad_x,pad_y,pad_w,pad_h) then
+  if deflx_ballbox(ball_x,ball_y,bdx,bdy,tx,ty,tw,th)
    ball_dx = -ball_dx
   else  
    ball_dy = -ball_dy
   end
-  sfx(1) 
+  pad_c=8  
  end
  
  --if ball_r >3 or ball_r < 2 then
@@ -98,7 +98,7 @@ function _draw()
 end
 
 function ball_box(bx,by,box_x,box_y,box_w,box_h)
- if by-ball_r > box_y+box_h then   
+ if bx-ball_r > box_y+box_h then   
   return false
  end 
  if by+ball_r < box_y then   
@@ -107,7 +107,7 @@ function ball_box(bx,by,box_x,box_y,box_w,box_h)
  if bx-ball_r > box_x+box_w then   
   return false
  end 
- if bx+ball_r < box_x then   
+ if by+ball_r < box_x then   
   return false
  end
   
@@ -190,4 +190,3 @@ __gfx__
 00700700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 __sfx__
 000100001d3501d3501d3501d3501d3501d3501d35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-010100002935029350293402933029320293102935000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
