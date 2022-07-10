@@ -63,7 +63,6 @@ function startgame()
 	pad_c=7
 	
 	lives=3
-	points=0	
 	
 	serveball()
 end
@@ -81,7 +80,7 @@ function gameover()
 end
 
 function update_gameover()
-  if btn(4) then
+ if btn(4) then
   startgame()
  end
 end
@@ -94,7 +93,6 @@ function draw_game()
 
  rectfill(0,0,128,6,0)
  print("lives:"..lives,1 ,1,7)
- print("score:"..points,40,1,7)
 end
 
 function update_game()
@@ -151,7 +149,6 @@ function update_game()
    ball_dy = -ball_dy
   end
   sfx(1) 
-  points+=1
  end
  
  --if ball_r >3 or ball_r < 2 then

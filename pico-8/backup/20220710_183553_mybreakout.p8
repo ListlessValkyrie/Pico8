@@ -38,10 +38,7 @@ function draw_start()
 end
 
 function draw_gameover()
- --cls()
- rectfill(0,60,128,75,0)
- print("game over",46,62,7)
- print("press ❎ to restart",27,68,7)
+ cls()
 end
 
 function update_start()
@@ -52,6 +49,10 @@ end
 
 function startgame()
  mode="game"
+ ball_x=1
+	ball_dx=1
+	ball_y=1
+	ball_dy=1
 	ball_r=2
 	ball_dr=0.5
 	
@@ -63,27 +64,10 @@ function startgame()
 	pad_c=7
 	
 	lives=3
-	points=0	
-	
-	serveball()
-end
-
-function serveball()
- ball_x=5
- ball_y=33
-	ball_dx=1
-	ball_dy=-1
-end
-
-
-function gameover()
- mode="gameover"
 end
 
 function update_gameover()
-  if btn(4) then
-  startgame()
- end
+ 
 end
 
 function draw_game()
@@ -94,7 +78,6 @@ function draw_game()
 
  rectfill(0,0,128,6,0)
  print("lives:"..lives,1 ,1,7)
- print("score:"..points,40,1,7)
 end
 
 function update_game()
@@ -129,13 +112,13 @@ function update_game()
  nextx = ball_x+ball_dx
 	nexty = ball_y-ball_dy
  
- if nextx >124 or nextx < 3 then
+ if nextx >127 or nextx < 0 then
   nextx=mid(0,nextx,127)
   ball_dx = -ball_dx
   sfx(0)
  end
  
- if nexty < 10 then
+ if nexty >127 or nexty < 8 then
   nexty=mid(0,nexty,127)
   ball_dy = -ball_dy
   sfx(0) 
@@ -151,7 +134,6 @@ function update_game()
    ball_dy = -ball_dy
   end
   sfx(1) 
-  points+=1
  end
  
  --if ball_r >3 or ball_r < 2 then
@@ -160,17 +142,6 @@ function update_game()
  
  ball_x=nextx
 	ball_y=nexty
-	
-	if nexty >127 then
-  sfx(2) 
-  lives-=1
-  if lives < 0 then
-   gameover()
-  else
-   serveball()
-  end
- end
- 
 end
 
 function ball_box(bx,by,box_x,box_y,box_w,box_h)
@@ -267,4 +238,3 @@ __gfx__
 __sfx__
 000100001d3501d3501d3501d3501d3501d3501d35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 010100002935029350293402933029320293102935000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00050000264501f45017450124500b450084500645003450024500045001450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
