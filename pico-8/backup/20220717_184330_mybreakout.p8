@@ -62,30 +62,16 @@ function startgame()
 	pad_h=3
 	pad_c=7
 
-
+ brick_x=5
+ brick_y=20
  brick_w=10
  brick_h=4
- buildbricks()
+ brick_v=true
 	
 	lives=3
 	points=0	
 	
 	serveball()
-end
-
-function buildbricks()
- local i
- 
- brick_x={}
- brick_y={}
- brick_v={}
-
- for i=1,10 do
-  add(brick_x,5+(i-1)*(brick_w+2))
-  add(brick_y,20)
-  add(brick_v,true)
- end
-
 end
 
 function serveball()
@@ -112,13 +98,9 @@ function draw_game()
  rectfill(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,pad_c)
 
  --draw bricks
- for i=1,#brick_x do
-  if brick_v[i] then
-   rectfill(brick_x[i],brick_y[i],brick_x[i]+brick_w,brick_y[i]+brick_h,12)
-  end
+ if brixk_v then
+  rectfill(brick_x,brick_y,brick_x+brick_w,brick_y+brick_h,12)
  end
- 
-
 
  rectfill(0,0,128,6,0)
  print("lives:"..lives,1 ,1,7)
@@ -182,20 +164,18 @@ function update_game()
   points+=1
  end
  
- for i=1,#brick_x do
   -- check if ball hit brick
-	 if brick_v[i] and ball_box(nextx,nexty,brick_x[i],brick_y[i],brick_w,brick_h) then
-	  -- deal with collision 
-	  if deflx_ballbox(ball_x,ball_y,ball_dx,ball_dy,brick_x[i],brick_y[i],brick_w,brick_h) then
-	   ball_dx = -ball_dx
-	  else  
-	   ball_dy = -ball_dy
-	  end
-	  sfx(3) 
-	  brick_v[i]=false
-	  points+=10
-	 end
-	end
+ if birck_v and ball_box(nextx,nexty,brick_x,brick_y,brick_w,brick_h) then
+  -- deal with collision 
+  if deflx_ballbox(ball_x,ball_y,ball_dx,ball_dy,brick_x,brick_y,brick_w,brick_h) then
+   ball_dx = -ball_dx
+  else  
+   ball_dy = -ball_dy
+  end
+  sfx(3) 
+  brick_v=false
+  points+=10
+ end
  
  --if ball_r >3 or ball_r < 2 then
  -- ball_dr=-ball_dr

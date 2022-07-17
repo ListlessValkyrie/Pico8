@@ -61,11 +61,31 @@ function startgame()
 	pad_w=24
 	pad_h=3
 	pad_c=7
+
+
+ brick_w=10
+ brick_h=4
+ buildbricks()
 	
 	lives=3
 	points=0	
 	
 	serveball()
+end
+
+function buildbricks()
+ local i
+ 
+ brick_x={}
+ brick_y={}
+ brick_v={}
+
+ for i=1,10 do
+  add(brick_x,5+(i-1)*(brick_w+2))
+  add(brick_y,20)
+  add(brick_v,true)
+ end
+
 end
 
 function serveball()
@@ -89,8 +109,16 @@ end
 function draw_game()
  cls(1)
  circfill(ball_x,ball_y,ball_r,10)
-
  rectfill(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,pad_c)
+
+ --draw bricks
+ for i=1,#brick_x do
+  if brick_v[i] then
+   rectfill(brick_x[i],brick_y[i],brick_x[i]+brick_w,brick_y[i]+brick_h,12)
+  end
+ end
+ 
+
 
  rectfill(0,0,128,6,0)
  print("lives:"..lives,1 ,1,7)
@@ -118,7 +146,7 @@ function update_game()
  end
 
  pad_x+=pad_dx
- 
+ pad_x=mid(0,pad_x,127-pad_w) 
  -- frame=frame+1
 
 
@@ -142,9 +170,9 @@ function update_game()
  end
  
  pad_c=7
+ -- check if ball hit pad
  if ball_box(nextx,nexty,pad_x,pad_y,pad_w,pad_h) then
-  -- deal with collision
-  
+  -- deal with collision 
   if deflx_ballbox(ball_x,ball_y,ball_dx,ball_dy,pad_x,pad_y,pad_w,pad_h) then
    ball_dx = -ball_dx
   else  
@@ -153,6 +181,21 @@ function update_game()
   sfx(1) 
   points+=1
  end
+ 
+ for i=1,#brick_x do
+  -- check if ball hit brick
+	 if brick_v[i] and ball_box(nextx,nexty,brick_x[i],brick_y[i],brick_w,brick_h) then
+	  -- deal with collision 
+	  if deflx_ballbox(ball_x,ball_y,ball_dx,ball_dy,brick_x[i],brick_y[i],brick_w,brick_h) then
+	   ball_dx = -ball_dx
+	  else  
+	   ball_dy = -ball_dy
+	  end
+	  sfx(3) 
+	  brick_v[i]=false
+	  points+=10
+	 end
+	end
  
  --if ball_r >3 or ball_r < 2 then
  -- ball_dr=-ball_dr
@@ -268,3 +311,4 @@ __sfx__
 000100001d3501d3501d3501d3501d3501d3501d35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 010100002935029350293402933029320293102935000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00050000264501f45017450124500b450084500645003450024500045001450000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0003000038350333501f3501535002350013500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

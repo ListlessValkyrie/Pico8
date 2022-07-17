@@ -62,10 +62,10 @@ function startgame()
 	pad_h=3
 	pad_c=7
 
-
+ buildbricks()
  brick_w=10
  brick_h=4
- buildbricks()
+ 
 	
 	lives=3
 	points=0	
@@ -80,9 +80,9 @@ function buildbricks()
  brick_y={}
  brick_v={}
 
- for i=1,10 do
-  add(brick_x,5+(i-1)*(brick_w+2))
-  add(brick_y,20)
+ for i=1,5 do
+  add(brick_x,5+(i-1)*(brick_w+1))
+  add(brick_y,i*(brick_w+1))
   add(brick_v,true)
  end
 
@@ -113,8 +113,8 @@ function draw_game()
 
  --draw bricks
  for i=1,#brick_x do
-  if brick_v[i] then
-   rectfill(brick_x[i],brick_y[i],brick_x[i]+brick_w,brick_y[i]+brick_h,12)
+  if brixk_v[i] then
+   rectfill(brick_x[i],brick_y[i],brick_x[i]+brick_w[i],brick_y[i]+brick_h[i],12)
   end
  end
  
@@ -184,7 +184,7 @@ function update_game()
  
  for i=1,#brick_x do
   -- check if ball hit brick
-	 if brick_v[i] and ball_box(nextx,nexty,brick_x[i],brick_y[i],brick_w,brick_h) then
+	 if birck_v[i] and ball_box(nextx,nexty,brick_x[i],brick_y[i],brick_w,brick_h) then
 	  -- deal with collision 
 	  if deflx_ballbox(ball_x,ball_y,ball_dx,ball_dy,brick_x[i],brick_y[i],brick_w,brick_h) then
 	   ball_dx = -ball_dx
