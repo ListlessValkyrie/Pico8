@@ -63,7 +63,7 @@ function startgame()
 	pad_c=7
 
 
- brick_w=9
+ brick_w=10
  brick_h=4
  buildbricks()
 	
@@ -80,9 +80,9 @@ function buildbricks()
  brick_y={}
  brick_v={}
 
- for i=1,66 do
-  add(brick_x,4+((i-1)%11)*(brick_w+2))
-  add(brick_y,20+flr((i-1)/11)*(brick_h+2))
+ for i=1,10 do
+  add(brick_x,5+(i-1)*(brick_w+2))
+  add(brick_y,20)
   add(brick_v,true)
  end
 
@@ -90,7 +90,7 @@ end
 
 function serveball()
  ball_x=5
- ball_y=60
+ ball_y=33
 	ball_dx=1
 	ball_dy=-1
 end
