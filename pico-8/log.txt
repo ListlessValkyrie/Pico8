@@ -12,7 +12,7 @@
 [000000]     07 fullscreen_method 1 // 0 maximized window (linux)  1 borderless desktop-sized window  2 hardware fullscreen (warning: erratic behaviour under some drivers)
 [000000]     08 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
 [000000]     09 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
-[000000]     10 sessions 12 // number of times program has been run
+[000000]     10 sessions 15 // number of times program has been run
 [000000]     11 rmb_key 0 // 0 for none  226 for LALT
 [000000]     12 desktop_path 
 [000000]     13 read_controllers_in_background 0
@@ -45,71 +45,59 @@
 [000000]     40 transform_screen 0
 [000000]     41 gfx_grid_lines 0
 [000000]   
-[000000]   codo_system_init
-[000424]   Compiled against SDL version: 2.0.2
-[000424]   Linked against SDL version:   2.0.9
-[000424]   Current video driver: windows
-[000424]   codo_reset_timer
-[000424]   codo_gui_init
-[000424]   codo_keys_init
-[000424]   codo_text_init
-[000424]   codo_video_init
-[000424]   codo_mouse_init
-[000424]   codo_joystick_init
-[000425]   Reading controller mappings: C:/Users/martin.davies/AppData/Roaming/pico-8/sdl_controllers.txt
-[000425]   searching for joysticks
-[000425]     found 0 joysticks
-[000425]   ok
-[000425] ok
-[000436] codo_load_pod: C:/Program Files (x86)/PICO-8/pico8.dat ok 
-[000439] codo_set_screen 128 128 8 100
-[000439]  window size: 640 540
-[000440] setting fullscreen window size to 1920 1080
-[000580]   setting filter to nearest (screen_mode 1  back page width: 128)
+[000001]   codo_system_init
+[000571]   Compiled against SDL version: 2.0.2
+[000571]   Linked against SDL version:   2.0.9
+[000571]   Current video driver: windows
+[000571]   codo_reset_timer
+[000571]   codo_gui_init
+[000571]   codo_keys_init
+[000571]   codo_text_init
+[000571]   codo_video_init
+[000571]   codo_mouse_init
+[000571]   codo_joystick_init
+[000573]   Reading controller mappings: C:/Users/Listless/AppData/Roaming/pico-8/sdl_controllers.txt
+[000573]   searching for joysticks
+[000573]     found 0 joysticks
+[000573]   ok
+[000573] ok
+[000588] codo_load_pod: C:/Program Files (x86)/PICO-8/pico8.dat ok 
+[000595] codo_set_screen 128 128 8 100
+[000595]  window size: 640 540
+[000595] setting fullscreen window size to 1920 1080
+[001051]   setting filter to nearest (screen_mode 1  back page width: 128)
   renderer direct3d:
    flags: 0x0000000E ( |  | )
    texture formats (3): ARGB8888, YV12, IYUV
    max texture size: 16384x16384
-[000582]  desktop size: 1920 1080
-[000582] ok
-[000584] codo_sound_init mix_buffer_size: 1024
-[000584] codo_sound_init
-[000584] SDL_INIT_AUDIO ok
-[000621] SDL_OpenAudio ok
-[000621]  freq:22050
+[001073]  desktop size: 1920 1080
+[001073] ok
+[001080] codo_sound_init mix_buffer_size: 1024
+[001080] codo_sound_init
+[001080] SDL_INIT_AUDIO ok
+[001422] SDL_OpenAudio ok
+[001422]  freq:22050
  channels:1
-[000621] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
-[000621] Current audio driver: wasapi
-[000621] splore_init
-[761377] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[803920] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[827117] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[1412660] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[1451066] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[1595884] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[1607096] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[1616881] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[1971339] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[1992018] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[2008680] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[4417191] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[4441698] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[4609197] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[4665266] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[4711705] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[5198075] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[5335070] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[5356850] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[5390742] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[5451571] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
-[5623832] window closed (14)
-[5623832] codo_exit
-[5623832]   cmusic_stop
-[5623832]   codo_main_exit
-[5623833]   codo_config_save
-[5623834]   codo_sound_exit
-[5623834]   codo_video_exit
-[5623848]   codo_joystick_exit
-[5623848]   codo_system_exit
-[5623849]   codo_items_created: 1354
-[5623849] ok
+[001422] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
+[001422] Current audio driver: wasapi
+[001422] splore_init
+[006850] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[218946] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[235352] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[261223] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[267925] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[273521] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[279287] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[501925] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[603862] run_cart current_filename: C:/Users/Listless/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[608120] window closed (14)
+[608120] codo_exit
+[608120]   cmusic_stop
+[608120]   codo_main_exit
+[608122]   codo_config_save
+[608124]   codo_sound_exit
+[608124]   codo_video_exit
+[608183]   codo_joystick_exit
+[608183]   codo_system_exit
+[608183]   codo_items_created: 1355
+[608183] ok

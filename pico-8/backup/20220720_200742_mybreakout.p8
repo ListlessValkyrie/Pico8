@@ -89,11 +89,7 @@ function buildbricks()
 end
 
 function serveball()
- ball_x=pad_x+flr(pad_w/2)
- ball_y=pad_y-ball_r
- ball_dx=1
- ball_dy=-1
- sticky=true
+
 end
 
 
@@ -110,12 +106,6 @@ end
 function draw_game()
  cls(1)
  circfill(ball_x,ball_y,ball_r,10)
- 
- if sticky then
- -- serve preview
-   line(ball_x+ball_dx*4,ball_y+ball_dy*4,ball_x+ball_dx*6,ball_y+ball_dy*6,10)
- end
-
  rectfill(pad_x,pad_y,pad_x+pad_w,pad_y+pad_h,pad_c)
 
  --draw bricks
