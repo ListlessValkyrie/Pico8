@@ -15,8 +15,7 @@ __lua__
 function _init()
  cls()
  mode="start"
- level="bxbxbxbx"
- debug=""
+ level="bbbbbb"
 end
 
 function _update60()
@@ -49,7 +48,7 @@ function startgame()
 
  brick_w=9
  brick_h=4
- buildbricks(level)
+ buildbricks()
  --brick_y=20
 
  lives=3
@@ -63,39 +62,19 @@ function startgame()
 end
 
 function buildbricks(lvl)
- local i,j,chr,last
+ local i
  brick_x={}
  brick_y={}
  brick_v={}
  
  sub(str,start,ending)
- j=0
+ 
+
  --brick_x={5,16,27,38,49,60,71,82,93,104,115}
- for i=1,#lvl do
-  j+=1
-  chr=sub(lvl,i,i)
-  if chr=="b" then
-   last="b"
-	  add(brick_x,4+((j-1)%11)*(brick_w+2))
-	  add(brick_y,20+flr((j-1)/11)*(brick_h+2))
-	  add(brick_v,true)
-	 elseif chr=="x" then
-	  last="x"
-	 elseif chr=="/" then
-	  j=(flr((j-1)/11)+1)*11
-	 elseif chr>="0" and chr<="9" then 
-	  for o=1,chr+0 do
-	   if last=="b" then
-	   	add(brick_x,4+((j-1)%11)*(brick_w+2))
-	    add(brick_y,20+flr((j-1)/11)*(brick_h+2))
-	    add(brick_v,true)
-	   elseif last=="x" then
-	   
-	   end
-	   j+=1
-	  end
-	  j-=1
-	 end
+ for i=1,66 do
+  add(brick_x,4+((i-1)%11)*(brick_w+2))
+  add(brick_y,20+flr((i-1)/11)*(brick_h+2))
+  add(brick_v,true)
  end 
 end
 
@@ -316,13 +295,9 @@ function draw_game()
  end 
  
  rectfill(0,0,128,6,0)
- if debug!="" then
-  print(debug,1,6)
- else
-  print("lives:"..lives,1,1,7)
-  print("score:"..points,40,1,7)
-  print("chain:"..chain,100,1,7)
- end 
+ print("lives:"..lives,1,1,7)
+ print("score:"..points,40,1,7)
+ print("chain:"..chain,100,1,7)
 end
 
 function ball_box(bx,by,box_x,box_y,box_w,box_h)

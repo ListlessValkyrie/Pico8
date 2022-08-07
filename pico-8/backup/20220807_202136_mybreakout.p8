@@ -15,7 +15,7 @@ __lua__
 function _init()
  cls()
  mode="start"
- level="bxbxbxbx"
+ level="b6/b3/b9"
  debug=""
 end
 
