@@ -106,3 +106,14 @@
 [3379624] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
 [3810975] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
 [3907474] run_cart current_filename: C:/Users/martin.davies/AppData/Roaming/pico-8/carts/mybreakout.p8 running_filename: mybreakout.p8 running_cart_lid: 
+[4054215] window closed (14)
+[4054215] codo_exit
+[4054215]   cmusic_stop
+[4054215]   codo_main_exit
+[4054215]   codo_config_save
+[4054216]   codo_sound_exit
+[4054216]   codo_video_exit
+[4054223]   codo_joystick_exit
+[4054223]   codo_system_exit
+[4054224]   codo_items_created: 1355
+[4054224] ok

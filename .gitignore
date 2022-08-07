@@ -1,0 +1,16 @@
+# This requires you to have setup a subs to your pico-8 folder.
+
+# Folders
+pico-8/backup/
+pico-8/bbs/
+# pico-8/carts/ - this is where user stuff goes!
+pico-8/cdata/
+pico-8/cstore
+pico-8/plates
+
+# Files
+activity_log.txt
+config.txt
+favourites.txt
+log.txt
+sdl_controllers.txt
